@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Markel Navarro — Game Developer Portfolio</title>
+<meta name="description" content="Portfolio de Markel Navarro, estudiante de desarrollo de videojuegos especializado en Unreal Engine 5, Unity y networking multijugador con Photon Fusion.">
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="noise-overlay"></div>
+
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo">MN<span class="dot">.</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">Sobre mí</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Proyectos</a></li>
+      <li><a href="#contact">Contacto</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header id="home" class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">// game developer</p>
+    <h1 class="hero-title">Markel Navarro</h1>
+    <p class="hero-subtitle">
+      Estudiante de desarrollo de videojuegos en <strong>EUNEIZ</strong>, especializado en
+      <strong>Unreal Engine 5</strong>, <strong>Unity</strong> y sistemas multijugador con
+      <strong>Photon Fusion</strong>.
+    </p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn btn-primary">Ver proyectos</a>
+      <a href="#contact" class="btn btn-ghost">Contactar</a>
+    </div>
+  </div>
+  <a href="#about" class="scroll-cue" aria-label="Bajar">
+    <span></span>
+  </a>
+</header>
+
+<main>
+
+  <section id="about" class="section">
+    <div class="section-inner">
+      <p class="section-label">01 — Sobre mí</p>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            Soy estudiante de desarrollo de videojuegos, formándome en asignaturas como
+            <em>AI for Video Games</em>, <em>Network Programming for Video Games</em> y
+            <em>Advanced Game Design Mechanics and Techniques</em>. Trabajo tanto en
+            <strong>Unreal Engine 5</strong> (C++ y Blueprint) como en <strong>Unity</strong> (C#),
+            con especial interés en la parte de networking multijugador.
+          </p>
+          <p>
+            Me gusta meterme en el motor de red tanto como en el gameplay: sincronización de estado,
+            arquitecturas host/client y shared mode, y la interfaz que conecta todo eso con el jugador.
+          </p>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card">
+            <span class="stat-number">3+</span>
+            <span class="stat-text">proyectos en motor</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">2</span>
+            <span class="stat-text">motores: UE5 &amp; Unity</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">02</span>
+            <span class="stat-text">versiones de Photon Fusion</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section section-alt">
+    <div class="section-inner">
+      <p class="section-label">02 — Skills</p>
+      <div class="skills-grid">
+
+        <div class="skill-card">
+          <h3>Motores</h3>
+          <ul>
+            <li>Unreal Engine 5 <span class="tag">C++ / Blueprint</span></li>
+            <li>Unity <span class="tag">C#</span></li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3>Networking</h3>
+          <ul>
+            <li>Photon Fusion 2 <span class="tag">Host/Client</span></li>
+            <li>Photon Fusion 3 <span class="tag">Shared Mode</span></li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3>Gameplay &amp; UI</h3>
+          <ul>
+            <li>Sistemas de menús e interfaz (UMG / UI Toolkit)</li>
+            <li>Actores interactivos y mecánicas en C++</li>
+            <li>Sistemas de inventario y recogida de objetos</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3>Otros focos</h3>
+          <ul>
+            <li>IA para videojuegos</li>
+            <li>Diseño de mecánicas de juego</li>
+            <li>Trabajo en equipo sobre repos compartidos</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <div class="section-inner">
+      <p class="section-label">03 — Proyectos</p>
+
+      <article class="project-card">
+        <div class="project-media" data-glyph="UE5"></div>
+        <div class="project-body">
+          <div class="project-head">
+            <h3>CocinaSimulator</h3>
+            <div class="project-tags">
+              <span class="tag">Unreal Engine 5.6</span>
+              <span class="tag">Photon Fusion 3</span>
+              <span class="tag">Shared Mode</span>
+            </div>
+          </div>
+          <p>
+            Proyecto individual de curso: un simulador cooperativo de cocina construido sobre
+            Photon Fusion 3 en modo Shared. Me encargué del sistema de <em>DropZones</em> para la
+            destrucción de ingredientes y del menú de fin de partida (<code>WBP_EndMatchMenu</code>),
+            con marcador dinámico y lógica de vuelta al lobby.
+          </p>
+          <ul class="project-highlights">
+            <li>Sistema de zonas de entrega y destrucción de ingredientes</li>
+            <li>Menú de fin de partida con puntuación dinámica</li>
+            <li>Documento de memoria y presentación del proyecto</li>
+          </ul>
+          <!-- Sustituye este enlace por el de tu repo cuando lo tengas -->
+          <a class="project-link" href="#" target="_blank" rel="noopener">Ver repositorio →</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-media" data-glyph="UE5"></div>
+        <div class="project-body">
+          <div class="project-head">
+            <h3>DungeonCrawler</h3>
+            <div class="project-tags">
+              <span class="tag">Unreal Engine 5.6</span>
+              <span class="tag">C++ / Blueprint</span>
+              <span class="tag">Trabajo en equipo</span>
+            </div>
+          </div>
+          <p>
+            Proyecto en equipo dentro de Unreal Engine 5.6. Mi rol se centró en los menús del juego:
+            <code>WB_MenuOpciones</code> (sliders de brillo y sensibilidad) y <code>WB_MenuSalida</code>
+            (salir, volver o ir al menú principal), además de integrar la recogida de objetos en el
+            inventario y construir actores en C++ como plataformas móviles y una trampa de fuego con
+            proyectiles.
+          </p>
+          <ul class="project-highlights">
+            <li>Menú de opciones e interfaz de salida</li>
+            <li>Integración de recogida de objetos con el inventario</li>
+            <li>Actores en C++: plataformas móviles y trampa de fuego con proyectiles</li>
+          </ul>
+          <a class="project-link" href="#" target="_blank" rel="noopener">Ver repositorio →</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-media" data-glyph="UNITY"></div>
+        <div class="project-body">
+          <div class="project-head">
+            <h3>ShooterMultiplayer</h3>
+            <div class="project-tags">
+              <span class="tag">Unity</span>
+              <span class="tag">Photon Fusion 2</span>
+              <span class="tag">Host/Client</span>
+            </div>
+          </div>
+          <p>
+            FPS multijugador en Unity sobre Photon Fusion 2 con arquitectura Host/Client. Trabajé en
+            correcciones de interfaz, recogida de armas, un sistema de rachas de bajas (granadas,
+            ataques aéreos, torretas) y el menú de pausa.
+          </p>
+          <ul class="project-highlights">
+            <li>Sistema de rachas de bajas: granadas, airstrikes y torretas</li>
+            <li>Recogida de armas y ajustes de interfaz</li>
+            <li>Menú de pausa</li>
+          </ul>
+          <a class="project-link" href="#" target="_blank" rel="noopener">Ver repositorio →</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="contact" class="section section-alt">
+    <div class="section-inner contact-inner">
+      <p class="section-label">04 — Contacto</p>
+      <h2 class="contact-title">¿Hablamos de tu próximo proyecto?</h2>
+      <p class="contact-text">
+        Estoy abierto a colaboraciones, prácticas o simplemente a charlar sobre desarrollo de
+        videojuegos y networking multijugador.
+      </p>
+      <div class="contact-links">
+        <a href="mailto:markelnv2003@gmail.com" class="contact-link">
+          <span class="contact-label">Email</span>
+          <span class="contact-value">markelnv2003@gmail.com</span>
+        </a>
+        <a href="https://github.com/Markel16" target="_blank" rel="noopener" class="contact-link">
+          <span class="contact-label">GitHub</span>
+          <span class="contact-value">github.com/Markel16</span>
+        </a>
+        <!-- Añade aquí LinkedIn u otras redes si quieres -->
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Markel Navarro — hecho con HTML, CSS y JS puro.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
